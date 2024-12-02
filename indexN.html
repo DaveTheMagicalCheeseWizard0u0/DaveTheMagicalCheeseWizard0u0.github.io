@@ -11,15 +11,15 @@
     <dialog id="dialog" >
 
       <div id="divDialog">
-        <h1 id="h1">Projet personnel</h1>
+        <h1 id="h1">Personlig prosjekt</h1>
         <hr id="ligne">
-        <p >Design web gr.2 - Automne 2024</p>
+        <p >Webdesign gr.2 - Høst 2024</p>
 
         <div id="milieux">
           <div id="gauche">
-            <p class="gauche" id="auteur">Réaliser par</p>
+            <p class="gauche" id="auteur">Regissert av</p>
             <p class="gauche">Gabriel Tremblay</p>
-            <p class="gauche" id="inspi">Inspiration</p>
+            <p class="gauche" id="inspi">Inspirasjon</p>
             <a href="https://codesandbox.io/s/z9fhk" class="gauche">https://codesandbox.io/s/z9fhk</a>
           </div>
           <div id="droite">
@@ -28,10 +28,10 @@
 
         </div>
 
-        <label for="checbocDialog">Ne plus afficher ce message</label>
+        <label for="checbocDialog">Ikke vis denne meldingen igjen</label>
         <input type="checkbox" id="checbocDialog">
         <p></p>
-        <button id="fermerDialog" onclick="dialogFermer()">Fermer</button>
+        <button id="fermerDialog" onclick="dialogFermer()">Lukke</button>
 
       </div>
 
@@ -39,7 +39,7 @@
 
     <div class="wrapper">
       <p>
-        Utilise le clavier si dessou pour trouver le mot secret ou demande un indice.
+        Bruk tastaturet hvis du vil finne det hemmelige ordet eller be om et hint.
       </p>
     </div>
 
@@ -54,15 +54,15 @@
         tag</canvas
       >
       <div class="container">
-        <button class="btn-2" id="hint">Indice</button>
-        <button class="btn-2" id="reset" onclick="reset()">Nouvelle partie</button>
-        <button class="btn-2" id="deviner" onclick="deviner()">Deviner le mot</button>
+        <button class="btn-2" id="hint">Indeks</button>
+        <button class="btn-2" id="reset" onclick="reset()">Ny del</button>
+        <button class="btn-2" id="deviner" onclick="deviner()">Å gjette ordet</button>
       </div>
-      <a href="/indexN.html">
-        <button id="bouttoncacher"></button>
+      <a href="">
+        <button id="bouttoncacher" onclick="boutoncacher()"></button>
       </a>
     </div>
 
-    <script src="src/index.js"></script>  
+    <script src="src/indexN.js"></script>  
   </body>
 </html>

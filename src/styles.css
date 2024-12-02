@@ -1,8 +1,14 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
 body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
     Helvetica, Arial, "Lucida Grande", sans-serif;
-  background-color: #c1d72e;
-  color: white;
+  background-color: white;
+  color: black;
   text-align: center;
   height: 100%;
   font-size: 18px;
@@ -14,8 +20,8 @@ body {
 }
 
 canvas {
-  color: white;
-  border: white dashed 2px;
+  color: rgb(0, 0, 0);
+  border: black dashed 2px;
   padding: 15px;
 }
 
@@ -38,35 +44,30 @@ h2 {
 p {
   font-size: 1.2em;
 }
-
 Button {
-  background: #c1d72e;
+  background: lightgray;
   border-radius: 5px;
-  border: solid 1px white;
-  color: white;
+  border: none;
+  color:black;
   width: 35px;
   height: 35px;
   margin: 0 10px 10px 0;
+  box-shadow: 0px 3px 0px 0px darkgray;
   outline: none;
 }
 Button:hover {
-  transition: 0.5s;
-  background: white;
-  border: solid 1px white;
-  color: #c1d72e;
+  translate: 0px 3px;
+  box-shadow: none;
 }
 
 .selected {
-  background: white;
-  border: solid 1px white;
-  color: #c1d72e;
+visibility: hidden;
 }
 
 .btn-2 {
   border-radius: 10px;
-  background: #c1d72e;
-  color: white;
-  border: solid 1px white;
+  background:lightgray;
+  color: black;
   text-decoration: none;
   cursor: pointer;
   font-size: 1.2em;
@@ -78,8 +79,58 @@ Button:hover {
   outline: none;
 }
 .btn-2:hover {
-  transition: 0.5s;
-  background: white;
-  border: solid 1px white;
-  color: #c1d72e;
+  translate: 0px 3px;
+  box-shadow: none;
+}
+
+#bouttoncacher{
+  background-color: white;
+  box-shadow: none;
+}
+
+#bouttoncacher:hover{
+  border: 1px solid black;
+}
+
+
+
+::backdrop{
+  background-color: rgba(93, 188, 251, 0.5) ;
+}
+
+
+#dialog{
+  border: none;
+  border-radius: 10px;
+
+}
+
+#milieux{
+  display: flex;
+
+}
+#gauche{
+  text-align: left;
+}
+img{
+  height: 200px; 
+}
+#h1{
+  font-size: 30px;
+}
+#divDialog{
+  padding: 30px;
+}
+#ligne{
+  border-color: blue;
+}
+#RP{
+  font-weight: bold;
+}
+#inspi{
+  font-weight: bold;
+}
+#fermerDialog{
+  font-weight: bold;
+  width: 100px;
 }

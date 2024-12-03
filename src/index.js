@@ -368,6 +368,10 @@ function dialogFermer(){
   dialog.close(); 
 
 }
+
+/**
+ * cette fonction permet de deviner le mot
+ */
 function deviner(){
   const mot = prompt("Vous pouvez deviner ATTENTION !!! vous avez une seul chance");
 

@@ -62,6 +62,7 @@ Button:hover {
 
 .selected {
 visibility: hidden;
+display: none;
 }
 
 .btn-2 {
@@ -98,7 +99,6 @@ visibility: hidden;
   background-color: rgba(93, 188, 251, 0.5) ;
 }
 
-
 #dialog{
   border: none;
   border-radius: 10px;
@@ -124,7 +124,7 @@ img{
 #ligne{
   border-color: blue;
 }
-#RP{
+#auteur{
   font-weight: bold;
 }
 #inspi{

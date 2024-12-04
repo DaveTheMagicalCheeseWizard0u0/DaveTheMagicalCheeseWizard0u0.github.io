@@ -228,49 +228,52 @@ buttonReset.addEventListener("click", init);
  * @returns rien
  */
 function guess(event) {
-  const guessWord = event.target.id;
-  const answerArray = answer.split("");
-  var counter = 0;
-  if (answer === winningCheck) {
-    livesDisplay.innerHTML = `Tu a gagné!`;
-    return;
-  } else {
-    if (life > 0) {
-      for (var j = 0; j < answer.length; j++) {
-        if (guessWord === answerArray[j]) {
-          wordDisplay[j] = guessWord;
-          console.log(guessWord);
-          answerDisplay.innerHTML = wordDisplay.join(" ");
-          winningCheck = wordDisplay.join("");
-          //console.log(winningCheck)
-          counter += 1;
-        }
-      }
-      if (counter === 0) {
-        life -= 1;
-        counter = 0;
-        animate();
-      } else {
-        counter = 0;
-      }
-      if (life > 1) {
-        livesDisplay.innerHTML = `Tu a ${life} vies!`;
-      } else if (life === 1) {
-        livesDisplay.innerHTML = `Tu a ${life} vie!`;
-      }else if(life == 9){
-        livesDisplay.innerHTML = `Tu a ${life} vie comme un petit chat MIAOUUUUUUUUUUUUUUUU!`;   
-      }else {
-        livesDisplay.innerHTML = `Partie fini!`;
-      }
-    } else {
-      return;
-    }
-    console.log(wordDisplay);
-    //console.log(counter);
-    //console.log(life);
+  const isButton = event.target.nodeName === "BUTTON";
+  if (isButton){
+    const guessWord = event.target.id;
+    const answerArray = answer.split("");
+    var counter = 0;
     if (answer === winningCheck) {
       livesDisplay.innerHTML = `Tu a gagné!`;
       return;
+    } else {
+      if (life > 0) {
+        for (var j = 0; j < answer.length; j++) {
+          if (guessWord === answerArray[j]) {
+            wordDisplay[j] = guessWord;
+            console.log(guessWord);
+            answerDisplay.innerHTML = wordDisplay.join(" ");
+            winningCheck = wordDisplay.join("");
+            //console.log(winningCheck)
+            counter += 1;
+          }
+        }
+        if (counter === 0) {
+          life -= 1;
+          counter = 0;
+          animate();
+        } else {
+          counter = 0;
+        }
+        if (life > 1) {
+          livesDisplay.innerHTML = `Tu a ${life} vies!`;
+        } else if (life === 1) {
+          livesDisplay.innerHTML = `Tu a ${life} vie!`;
+        }else if(life == 9){
+          livesDisplay.innerHTML = `Tu a ${life} vie comme un petit chat MIAOUUUUUUUUUUUUUUUU!`;   
+        }else {
+          livesDisplay.innerHTML = `Partie fini!`;
+        }
+      } else {
+        return;
+      }
+      console.log(wordDisplay);
+      //console.log(counter);
+      //console.log(life);
+      if (answer === winningCheck) {
+        livesDisplay.innerHTML = `Tu a gagné!`;
+        return;
+      }
     }
   }
 }
